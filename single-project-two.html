@@ -43,13 +43,7 @@ http://www.tooplate.com/view/2082-pure-mix
 <body>
 
 
-<!-- Preloader section
-================================================== -->
-<div class="preloader">
 
-	<div class="sk-spinner sk-spinner-pulse"></div>
-
-</div>
 
 
 <!-- Navigation section
@@ -103,8 +97,8 @@ http://www.tooplate.com/view/2082-pure-mix
 
 			<div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
            		 <div class="header-thumb">
-              		 <h1 class="wow fadeIn" data-wow-delay="1.6s">Machine Learning for Analyzing Household Electricity Data</h1>
-              		 <h3 class="wow fadeInUp" data-wow-delay="1.9s">Python,PyTorch</h3>
+              		 <h1 class="wow fadeIn" data-wow-delay="0.3s">Machine Learning for Analyzing Household Electricity Data</h1>
+              		 <h3 class="wow fadeInUp" data-wow-delay="0.4s">Python,PyTorch</h3>
            		 </div>
 			</div>
 
@@ -119,11 +113,11 @@ http://www.tooplate.com/view/2082-pure-mix
    <div class="container">
       <div class="row">
 
-         <div class="wow fadeInUp col-md-offset-1 col-md-3 col-sm-offset-1 col-sm-4" data-wow-delay="2.3s">
+         <div class="wow fadeInUp col-md-offset-1 col-md-3 col-sm-offset-1 col-sm-4" data-wow-delay="0.1s">
 		
 			<div class="project-info">
 				<h4>Date</h4>
-				<hp>February 2019 - Now</p>
+				<hp>February 2019 - August 2019</p>
 			</div>
 			<div class="project-info">
 				<h4>Category</h4>
@@ -132,21 +126,25 @@ http://www.tooplate.com/view/2082-pure-mix
 		</div>
 
 		<div class="wow fadeInUp col-md-7 col-sm-7" data-wow-delay="2.6s">
-			<p> Energy reduction attracts the growing attention of people in recent years due to the energy crisis and global warming.
-				 Energy disaggregation is an efficient method to reduce energy consumption
-				  since it can provide appliance specific data from the total electricity consumption to guide people to manage their electricity usage. 
-				  Besides, non-intrusive load monitoring is more efficient
-				   and cheap methods to get appliance specific data than the traditional intrusive load monitoring.
-					This paper applies the multiple logistic regression model and neural networks to the energy disaggregation tasks. 
-					To improve the prediction ability of the model, the demographic information, the house information, 
-					the appliance information and the weather information are added into our input features.
-					 We train the model on the Household Electricity Survey dataset,
-					  and evaluate our models by Root Mean Square Error and Mean Absolute Error.
-					   The results will be compared to two baseline models,
-					    and final results show multiple logistic regression model and neural networks can improve the disaggregation results compared to two baseline models.
+			<p> Energy reduction attracts the growing attention of people in recent years due to the energy crisis and global warming. 
+				Energy disaggregation is an efficient method to reduce energy consumption since it can provide appliance specific data from the total electricity consumption to guide people to manage their electricity usage.
+				Besides, non-intrusive load monitoring is more efficient and cheap methods to get appliance specific data than the traditional intrusive load monitoring. 
+				This project applies the MLR(multiple logistic regression) model and neural networks to the energy disaggregation tasks. 
+				To improve the prediction ability of the model, the demographic information, the house information, the appliance information and the weather information are added into our input features. 
+				We train the model on the Household Electricity Survey dataset, and evaluate our models by Root Mean Square Error and Mean Absolute Error. 
+				The results will be compared to two baseline models, and final results show multiple logistic regression model and neural networks can improve the disaggregation results compared to two baseline models.
 				</p>
-
-			<img src="images/disaggregation.png" class="img-responsive" alt="Single Project">
+			<img src="images/pie.jpg" class="img-responsive" alt="Single Project">
+			<p>Energy disaggregation is to separate the total energy consumption into the consumption of each appliance in a household. It is helpful to give people the instruction to adjust their electricity-using habits, and so it is also an efficient method of energy reduction.
+				In this project, we based on the daily electricity consumption data rather than the minute-level data, because providing the daily report of electricity consumption can give people the general direction to manage their electricity usage.
+				</p>
+			 <p>We use the HES dataset to train our models. The HES dataset provides demographic information, the house information, the appliance information, the weather information and the total electricity consumption. 
+				</p>
+				<p>For data preprocessing, we applied the standardization to the data to help the model converge more quickly. The categorical data is transformed into the one-hot encoding, and the appliance information is represented as a fixed-size vector whose dimension is the number of appliances in the corresponding appliance type. To deal with the missing data, we replace the missing data with the average and mode of the feature, and the missing indicator method is used to help model distinguish which value is the missing value.
+			</p>
+			<p> The MLR model and neural networks are chosen as our models to solve energy disaggregation tasks. The cross-entropy loss is chosen as our loss function. We use the RMSE and MAE to evaluate the performance of models on the testing set. The MLR model and neural networks perform better than the average baseline model and the constant-MLR model on RMSE and MAE, and the neural networks have the best performance among 4 models. From experimental results, we can know the weather information and the demographic information have a bigger effect on the prediction results.
+				 </p>
+			
 		</div>
 
       </div>
@@ -161,7 +159,7 @@ http://www.tooplate.com/view/2082-pure-mix
 		<div class="row">
 
 			<div class="col-md-12 col-sm-12">
-				<p class="wow fadeInUp"  data-wow-delay="0.3s">Copyright © 2016 Your Company Name - Designed by Tooplate</p>
+				<p class="wow fadeInUp"  data-wow-delay="0.3s"></p>
 				<ul class="social-icon wow fadeInUp"  data-wow-delay="0.6s">
 					<li><a href="#" class="fa fa-facebook"></a></li>
 					<li><a href="#" class="fa fa-twitter"></a></li>
